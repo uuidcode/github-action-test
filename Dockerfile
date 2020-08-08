@@ -9,4 +9,4 @@ COPY src ${workspaceDir}/src
 
 WORKDIR ${workspaceDir}
 
-ENTRYPOINT ["mvn", "clean", "test", "-X", "-Dtest=HelloWordTest#test", "-f", "/github/workspace/pom.xml"]
+ENTRYPOINT ["mvn", "clean", "test", "-X", "-Dtest=HelloWordTest#test", "-f", "/build/workspace/pom.xml"]
