@@ -1,6 +1,6 @@
 FROM uuidcode/java
 
-ARG workspaceDir=/github/workspace
+ARG workspaceDir=/build/workspace
 
 RUN mkdir -p ${workspaceDir}
 
