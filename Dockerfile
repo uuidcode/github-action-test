@@ -9,4 +9,4 @@ COPY src ${workspaceDir}/src
 
 WORKDIR ${workspaceDir}
 
-CMD mvn test -Dtest=HelloWordTest#test
+ENTRYPOINT mvn test -Dtest=HelloWordTest#test -f ${workspaceDir}/pom.xml
