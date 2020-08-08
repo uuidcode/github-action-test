@@ -1,11 +1,12 @@
 FROM uuidcode/java
 
-ARG buildDir=/github-action-test/build
+ARG workspaceDir=/github/workspace
 
-RUN mkdir -p ${buildDir}
+RUN mkdir -p ${workspaceDir}
 
-COPY pom.xml ${buildDir}/pom.xml
-COPY src ${buildDir}/src
+COPY pom.xml ${workspaceDir}/pom.xml
+COPY src ${workspaceDir}/src
 
-WORKDIR ${buildDir}
+WORKDIR ${workspaceDir}
+
 CMD mvn test -Dtest=HelloWordTest#test
