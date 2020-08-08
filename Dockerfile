@@ -4,8 +4,8 @@ ARG workspaceDir=/github/workspace
 
 RUN mkdir -p ${workspaceDir}
 
-COPY pom.xml ${workspaceDir}/pom.xml
-COPY src ${workspaceDir}/src
+ADD pom.xml ${workspaceDir}/pom.xml
+ADD src ${workspaceDir}/src
 
 WORKDIR ${workspaceDir}
 
