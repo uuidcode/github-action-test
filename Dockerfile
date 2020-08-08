@@ -4,8 +4,8 @@ ARG workspaceDir=/build/workspace
 
 RUN mkdir -p ${workspaceDir}
 
-ADD pom.xml ${workspaceDir}/pom.xml
-ADD src ${workspaceDir}/src
+COPY pom.xml ${workspaceDir}/pom.xml
+COPY src ${workspaceDir}/src
 
 WORKDIR ${workspaceDir}
 
