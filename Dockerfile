@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM uuidcode/java
 
 ARG buildDir=/github-action-test/build
 
