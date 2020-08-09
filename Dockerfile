@@ -7,6 +7,6 @@ RUN mkdir -p ${workspaceDir}
 COPY pom.xml ${workspaceDir}/pom.xml
 COPY src ${workspaceDir}/src
 
-RUN printevn
+RUN printenv
 
 ENTRYPOINT mvn clean test -X -Dtest=HelloWorldTest#test -f ${GITHUB_WORKSPACE}/pom.xml
