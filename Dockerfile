@@ -9,4 +9,4 @@ COPY src ${workspaceDir}/src
 
 RUN printenv
 
-ENTRYPOINT mvn clean test -X -Dtest=HelloWorldTest#test -f ${GITHUB_WORKSPACE}/pom.xml
+ENTRYPOINT mvn clean test -X -Dtest=HelloWorldTest#test -f /build/workspace/pom.xml
